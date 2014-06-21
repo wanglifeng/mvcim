@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+
+@model List<MvcApp.Models.QueryModels>
+<div class="container text-center">
+    <form action="/Query/JqQuery">
+        籍贯：<input type="text" placeholder="籍贯" name="jiguan" value="@ViewBag.jiguan" />
+        身高：<input type="text" placeholder="身高" name="shengao" value="@ViewBag.shengao" />
+        胸围：<input type="text" placeholder="胸围" name="xiongwei" value="@ViewBag.xiongwei" />
+        胸下围：<input type="text" placeholder="胸下围" name="xiawei" value="@ViewBag.xiawei" />
+        腰围：<input type="text" placeholder="腰围" name="yaowei" value="@ViewBag.yaowei" />
+        腹围：<input type="text" placeholder="腹围" name="fuwei" value="@ViewBag.fuwei" />
+        臀围：<input type="text" placeholder="臀围" name="tunwei" value="@ViewBag.tunwei" />
+        <button class="btn">查询</button>
+    </form>
+</div>
+<table class="table table-striped table-bordered table-hover table-condensed">
+    <tbody>
+        <tr>
+            <th>编码</th>
+            <th>年龄</th>
+            <th>籍贯</th>
+            <th>身高</th>
+            <th>体重</th>
+            <th>腰围</th>
+            <th>臀围</th>
+            <th>肩宽</th>
+             <th>胸下围</th>
+               <th>腹围</th>
+                 <th>头围</th>
+                   <th>大腿围</th>
+                     <th>小腿围</th>
+                       <th>腰高</th>
+                         <th>臀高</th>
+                           <th>上裆长</th>
+                             <th>下档长</th>
+                               <th>背宽</th>
+                                 <th>胸宽</th>
+                                   <th>详细数据</th>
+        </tr>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>start</td>
+                <td>@t.age</td>
+                <td>@t.pro</td>
+                <td>@t.height</td>
+                <td>@t.weight</td>
+                <td>@t.waist</td>
+                <td>@t.hip</td>
+                <td>@t.shoulder</td>
+                <td>@t.underbust</td>
+                <td>@t.abd</td>
+                <td>@t.head</td>
+                <td>@t.thigh</td>
+                <td>@t.calf</td>
+                <td>@t.waistheight</td>
+                <td>@t.hipheight</td>
+                <td>@t.Up</td>
+                <td>@t.Down</td>
+                <td>@t.across</td>
+                <td>@t.xiongkuan</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -3,7 +3,8 @@ using System.Data.OleDb;
 using System.Web;
 using System.Data;
 
-namespace vote
+
+namespace MvcApp
 {
 	public class DBHelper : IDisposable
 	{
@@ -11,7 +12,7 @@ namespace vote
 		public void OpenConnection()
 		{
 			conn =  new OleDbConnection ();
-			string connStr = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath ("~/Data/vote.mdb");
+			string connStr = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath ("~/App_Data/Info.mdb");
 			conn.ConnectionString = connStr;
 			conn.Open ();
 		}
